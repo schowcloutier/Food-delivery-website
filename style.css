@@ -1,0 +1,232 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family:'Raleway', sans-serif;
+    color: #777;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color:  rgb(120, 120, 120);
+}
+
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+    background-color: rgb(140, 198, 63);
+}
+
+.active {
+      background-color: rgb(140, 198, 63);
+}
+
+.nav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.parallax-1 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    background-image: url("images/table.jpg")
+  }
+
+  .logo {
+    width: 388px;
+    height: 370px;
+    display: block;
+    margin: auto;
+    padding-top: 110px;
+  }
+
+  
+  .intro {
+    text-align: center;
+    text-transform: uppercase;
+    color:  rgb(252, 252, 252);
+    padding-top: 300px;
+    font-size: xx-large;
+  }
+
+  .block1 {
+    color: #777;
+    background-color: rgb(189, 0, 6);
+    text-align:center;
+    padding:10px 10px 10px 10px;
+    margin: auto;
+    text-align: justify;
+}
+
+
+
+.name {
+    display: block;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.introduction {
+  margin-left: 40px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  min-height:50%;
+  text-align: justify;
+}
+
+
+.block2 {
+  color: #777;
+  background-color:  rgba(189, 0, 6, 0.742);
+  text-align:center;
+  padding:20px 10px 10px 10px;
+  margin: auto;
+  text-align: justify;
+}
+
+.block3 {
+  min-height: 500px;
+  width:100%;
+  font-size:0;
+}
+
+.search {
+  float:left;
+ margin-left: 50px;
+  width: 80px;
+  height:80px;
+  display:block;
+  background:transparent url('images/search.png') center top no-repeat;
+  background-size: contain;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+ }
+ 
+ .search:hover {
+    background-image: url('images/search_yellow.png');
+ }
+
+.intro-pic {
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.introduction p {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.big_wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper1 {
+  float:left;
+  padding: 40px;
+  margin-left: 200px;
+  margin-right: 80px;
+  
+}
+
+.wrapper2 {
+  float:left;
+  padding-top: 20.5px;
+  margin-right: 100px;
+}
+
+.image_wrapper{
+position: inline-block;
+margin: 10px;
+}
+
+
+ /* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-weight: 600;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color:  rgb(140, 198, 63);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: rgb(158, 219, 79);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+

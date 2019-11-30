@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Simpleats </title>
+    <link rel="stylesheet" type="text/css" href="confirmationStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:100,200,600,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script> 
+</head>
+              
+<body>
+    <ul class="nav">
+        <li><a href=index.html>Home</a></li>
+        <li><a href=liste_restaurants.html>Restaurants</a></li>
+        <li><a href=menu.html>Menu</a></li>
+        <li><a class="active" href=panier.html>Cart</a></li>
+    </ul>
+
+    <div class="parallax-1">
+        <div class="cart">
+            <div class="cart_container">
+                <h1>Payment details</h1>
+                <h2>1. Verify your order</h2>
+                <table class="table1">
+                    <tr>
+                        <th>Quantity</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Strawberry Crepe</td>
+                        <td>$4.99</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Blueberry Pancake</td>
+                        <td>$6.99</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Fruit Salad</td>
+                        <td>$3.99</td>
+                    </tr>
+                    <tr>
+                        <td><b>Total</b></td>
+                        <td></td>
+                        <td><b>$15.97</b></td>
+                    </tr>
+                    </table>
+                    <h2>2. Billing info</h2>
+                    <div class="billing">
+                        <img class="image" src="images/credit.png">
+                        <div class="information">
+                            <span>Full name </span><input type="text" placeholder="Enter text..." id="form"><br>
+                            <span>Credit card number</span><input type="text" placeholder="Enter number..." id="form"><br>
+                            <span>Expiry date</span><input type="text" placeholder="Enter number..." id="form"><br>
+                            <span>Security code</span><input type="text" placeholder="Enter number..." id="form"><br>
+                        </div>
+                    </div>
+                    <h2>3. Address</h2>
+                    <div class="billing">
+                            <img class="image" src="images/house.png">
+                            <div class="information">
+                                <span>Address</span><input type="text" placeholder="Enter text..." id="form"><br>
+                                <span>City</span><input type="text" placeholder="Enter text..." id="form"><br>
+                                <span>Province</span><input type="text" placeholder="Enter text..." id="form"><br>
+                                <span>Postal Code</span><input type="text" placeholder="Enter text..."id="form"><br>
+                            </div>
+                    </div>
+
+                    <h2>4. Contact</h2>
+                    <div class="billing">
+                            <div class="information">
+                                <span>Email</span><input type="text" placeholder="Enter text..."id="form"><br>
+                                <span>Phone number</span><input type="text" placeholder="Enter number..."id="form"><br>
+                            </div>
+                        </div>
+                    
+                    <br><br>
+                    <!--<a class="confirm" href=paid.html>Proceed to payment</a> -->
+                    <button class="confirm">Proceed to payment</button>
+                </div>
+        </div>  
+    </div>
+
+    <script>
+    $(document).ready(function() {
+        $('.confirm').on('click', function(e){
+            var isValid = true;
+                $('#form').each(function() {
+                    if ($.trim($(this).val()) == '') {
+                        isValid = false;
+                        alert("Please fill out every form!");
+                    }
+                });
+                if (isValid == false){
+                    e.preventDefault();
+                }
+                else{
+                window.location.href = 'paid.html'
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
